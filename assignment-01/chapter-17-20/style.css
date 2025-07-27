@@ -1,0 +1,41 @@
+@font-face {
+    font-family: primary;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+* {
+    padding: 10px;
+    margin: 0;
+    scroll-behavior: auto;
+    box-sizing: border-box;
+    font-family: primary;
+}
+
+body {
+    background-color: aquamarine;
+    /* height: 100vh; */
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93.5vh;
+}
+
+h1 {
+    /* padding-top: 250px; */
+    font-size: 72px;
+}
+
+.sec {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    /* padding-bottom: 25px; */
+    background-color: blanchedalmond;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px;
+}
