@@ -9,17 +9,20 @@
 
 body{
   width: 100%;
-  height: 100vh;
-  /* overflow: hidden; */
+  min-height: 100vh;
   padding: 10px;
   background-color: #070707;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* Wrapper styling */
 .wrapper {
   background: #eaeaeb;
+  width: 100%;
   max-width: 400px;
-  margin: 60px auto;
+  margin: 40px auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
@@ -29,13 +32,15 @@ header {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Input field styling */
 .inputField {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
+  flex-wrap: wrap; /* mobile par wrap karne ke liye */
 }
 
 .inputField input {
@@ -43,16 +48,18 @@ header {
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 6px;
+  font-size: 15px;
 }
 
 .inputField button {
-  padding: 10px 12px;
+  padding: 10px 14px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   background: #28a745;
   color: #fff;
   transition: 0.3s;
+  font-size: 15px;
 }
 
 .inputField button:hover {
@@ -82,6 +89,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 15px;
 }
 
 .todoList li .icons {
@@ -105,6 +113,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer button {
@@ -115,8 +125,62 @@ header {
   background: #dc3545;
   color: #fff;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 .footer button:hover {
   background: #c82333;
+}
+
+/* ========= Responsive Design ========= */
+@media (max-width: 600px) {
+  .wrapper {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  header {
+    font-size: 20px;
+  }
+
+  .inputField {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inputField input,
+  .inputField button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .todoList li {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    font-size: 18px;
+  }
+
+  .todoList li {
+    font-size: 13px;
+  }
+
+  .footer button {
+    font-size: 13px;
+  }
 }
