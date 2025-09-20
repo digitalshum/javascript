@@ -1,0 +1,58 @@
+.weather-app {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.weather-card {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+.weather-card.summer {
+    background-image: url('summer.jpg');
+}
+
+.weather-card.spring {
+    background-image: url('spring.jpg');
+}
+
+.weather-card.autumn {
+    background-image: url('autumn.jpg');
+}
+
+.weather-card.winter {
+    background-image: url('winter.jpg');
+}
+
+.weather-card.rainy {
+    background-image: url('rainy.jpg');
+}
+
+.weather-card.thunderstorm {
+    background-image: url('thunderstorm.jpg');
+}
